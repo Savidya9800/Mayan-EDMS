@@ -1,0 +1,13 @@
+# docker-compose.override.yml
+version: '3.9'
+
+services:
+  app:
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - DJANGO_SETTINGS_MODULE=mayan.settings.development
+    volumes:
+      # Mount your entire mayan source directory for live code reloads
+        - ../mayan/apps/checkouts/views.py:/opt/mayan-edms/lib/python3.9/site-packages/mayan/apps/checkouts/views.py
+
+      
