@@ -5,9 +5,8 @@ services:
   app:
     environment:
       - PYTHONDONTWRITEBYTECODE=1
-      - DJANGO_SETTINGS_MODULE=mayan.settings.development
+    # - DJANGO_SETTINGS_MODULE=mayan.settings.production
     volumes:
-      # Mount your entire mayan source directory for live code reloads
-        - ../mayan/apps/checkouts/views.py:/opt/mayan-edms/lib/python3.9/site-packages/mayan/apps/checkouts/views.py
-
-      
+    # Mount your entire mayan source directory for live code reloads
+      - /home/savidya/Mayan-EDMS/mayan/apps/appearance/templates/appearance/menus/menu_topbar.html:/opt/mayan-edms/lib/python3.9/site-packages/mayan/apps/appearance/templates/appearance/menus/menu_topbar.html
+      - /home/savidya/Mayan-EDMS/mayan/apps/appearance/static/appearance/images:/opt/mayan-edms/static/appearance/images
