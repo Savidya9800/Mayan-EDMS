@@ -10,3 +10,4 @@ services:
     # Mount your entire mayan source directory for live code reloads
       - /home/savidya/Mayan-EDMS/mayan/apps/appearance/templates/appearance/menus/menu_topbar.html:/opt/mayan-edms/lib/python3.9/site-packages/mayan/apps/appearance/templates/appearance/menus/menu_topbar.html
       - /home/savidya/Mayan-EDMS/mayan/apps/appearance/static/appearance/images:/opt/mayan-edms/static/appearance/images
+      - /home/savidya/Mayan-EDMS/mayan/apps/appearance/static/appearance/css/appearance.css:/opt/mayan-edms/lib/python3.9/site-packages/mayan/apps/appearance/static/appearance/css/appearance.css

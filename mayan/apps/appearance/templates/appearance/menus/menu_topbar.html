@@ -3,6 +3,19 @@
 {% load navigation_tags %}
 {% load smart_settings_tags %}
 
+<style>
+    /* Hide the "Get the book" topbar dropdown entry (works even with hashed static CSS). */
+    .navbar .dropdown-menu a[href*="mayan-edms.com/book"] {
+        display: none !important;
+    }
+
+    /* Hide the "Online store" topbar dropdown entry. */
+    .navbar .dropdown-menu a[href*="teespring.com/stores/mayan-edms"] {
+        display: none !important;
+    }
+
+</style>
+
 {% spaceless %}
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -15,7 +28,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{% url home_view %}"
-                style="display: flex; align-items: center; padding: 0 10px; position: relative; z-index: 10; justify-content: center;">
+                style="display: flex; align-items: center; padding: 10px 10px 0 10px; position: relative; justify-content: center;">
                 <img src="/static/appearance/images/kbsl_logo.png" alt="KBSL Doc Pro"
                     style="max-height: 140px; width: auto; display: block; margin-top: 7px; margin-left: 0; pointer-events: none;">
             </a>
