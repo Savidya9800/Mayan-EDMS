@@ -3,6 +3,19 @@
 {% load navigation_tags %}
 {% load smart_settings_tags %}
 
+<style>
+    /* Hide the "Get the book" topbar dropdown entry (works even with hashed static CSS). */
+    .navbar .dropdown-menu a[href*="mayan-edms.com/book"] {
+        display: none !important;
+    }
+
+    /* Hide the "Online store" topbar dropdown entry. */
+    .navbar .dropdown-menu a[href*="teespring.com/stores/mayan-edms"] {
+        display: none !important;
+    }
+
+</style>
+
 {% spaceless %}
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
