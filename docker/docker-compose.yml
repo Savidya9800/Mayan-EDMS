@@ -82,8 +82,9 @@ services:
     networks:
       - mayan
     # Enable to allow external access to the database.
-    # ports:
+    ports:
     #  - "5432:5432"
+      - "127.0.0.1:5433:5432"
     profiles:
       - postgresql
     restart: unless-stopped
