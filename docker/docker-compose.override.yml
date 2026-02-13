@@ -4,6 +4,11 @@ version: '3.9'
 services:
   app:
     environment:
+    # --- TIMEOUT SETTINGS (1 HOUR) ---
+      # 3600 seconds = 1 Hour
+      - MAYAN_GUNICORN_TIMEOUT=3600
+      - GUNICORN_TIMEOUT=3600
+      
       - PYTHONDONTWRITEBYTECODE=1
     # - DJANGO_SETTINGS_MODULE=mayan.settings.production
     volumes:
